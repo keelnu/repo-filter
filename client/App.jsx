@@ -1,6 +1,8 @@
 import React from 'react';
-import SearchBar from './SearchBar.jsx';
-import FilterButtons from './FilterButtons.jsx';
+import SearchBar from './components/SearchBar.jsx';
+import FilterButtons from './components/FilterButtons.jsx';
+import Header from './components/Header.jsx';
+import { Box } from '@chakra-ui/react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,7 +10,6 @@ import {
   useQuery,
   gql
 } from "@apollo/client";
-import { Heading } from '@chakra-ui/react';
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
@@ -49,11 +50,11 @@ const client = new ApolloClient({
 const App = () => {
 	return (
     <ApolloProvider client={client}>
-      <div>
-        <Heading size='xl'>Repo Filter</Heading>
+      <Header />
+      <Box>
         <SearchBar />
         <FilterButtons />
-      </div>
+      </Box>
     </ApolloProvider>
 	);
 }
