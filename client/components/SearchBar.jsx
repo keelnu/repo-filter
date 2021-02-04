@@ -2,21 +2,33 @@ import React from 'react';
 import { 
   Input,
   Button,
-  FormLabel,
+  ButtonGroup,
+  VStack,
+  HStack,
  } from '@chakra-ui/react';
 
+
  const SearchBar = () => {
+
 	return (
     <div>
-      <FormLabel>Search for repositories by user</FormLabel>
-      <Input 
-        placeholder='User'
-        variant='outline'
-        maxWidth='60%'
-        size='md'
-        isRequired
-      />
-      <Button size='md'>Search</Button>
+      <VStack align='left' spacing={4}>
+        <HStack>
+          <Input 
+            placeholder='Search repositories'
+            variant='outline'
+            maxWidth='45%'
+            size='md'
+            mr='3px'
+            isRequired
+          />
+          <Button>Search</Button>
+        </HStack>
+        <ButtonGroup size='sm' variant='outline' spacing={4}>
+          <Button>View All</Button>
+          <Button>Last Updated</Button>
+        </ButtonGroup>
+      </VStack>
     </div>
 	);
 }
