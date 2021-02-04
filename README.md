@@ -9,6 +9,7 @@ A work in progress-- a web app that aims to consume the GitHub repositories API 
 - React.js
 - Apollo Client
 - Node.js
+- Webpack
 
 ## Installation
 1. Fork and clone the repo
