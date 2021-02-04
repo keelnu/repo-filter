@@ -1,9 +1,10 @@
 # repo-filter
 
 ## About The Project
-A work in progress-- a web app that aims to consume the GitHub repositories API and display a searchable filtered list in the browser. 
-
-<img width="815" alt="Screen Shot 2021-02-04 at 4 39 26 PM" src="https://user-images.githubusercontent.com/54503796/106958646-a411e400-6707-11eb-9037-a65b660236ee.png">
+A work in progress-- a web app that aims to consume the GitHub repositories API and display a searchable filtered list in the browser. <br/> 
+<kbd>
+<img width="550" alt="app screenshot" src="https://user-images.githubusercontent.com/54503796/106958646-a411e400-6707-11eb-9037-a65b660236ee.png">
+</kbd>
 
 ## Built With
 - React.js
@@ -14,8 +15,8 @@ A work in progress-- a web app that aims to consume the GitHub repositories API 
 ## Installation
 1. Fork and clone the repo.
 2. Run `npm install` to download dependencies.
-3. Use `npm run dev` to spin up localhost – visit http://localhost:8080/ to view in browser.
-*Note: Currently app will only render if personal access token is explicitly included in line 6 of apolloclient.js (see open issue).
+3. Use `npm run dev` to spin up localhost – visit http://localhost:8080/ to view in browser.<br/>
+*Note: Currently app will only render if personal access token is explicitly included in line 6 of apolloclient.js (see open issue).*
 
 ## Contributors
 Kristiina Eelnurme
