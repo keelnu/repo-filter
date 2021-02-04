@@ -51,7 +51,9 @@ const App = () => {
 	return (
     <ApolloProvider client={client}>
       <Header />
-      <Box>
+      <Box
+        padding='14px 20px'
+      >
         <SearchBar />
         <FilterButtons />
       </Box>

@@ -10,13 +10,14 @@ import {
     <div>
       <FormLabel>Search for repositories by user</FormLabel>
       <Input 
-        placeholder='User'
+        placeholder='Enter user name'
         variant='outline'
         maxWidth='60%'
         size='md'
+        mr='10px'
         isRequired
       />
-      <Button size='md'>Search</Button>
+      <Button>Search</Button>
     </div>
 	);
 }

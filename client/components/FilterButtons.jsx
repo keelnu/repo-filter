@@ -6,8 +6,8 @@ import {
  const FilterButtons = () => {
 	return (
     <div>
-      <Button size='md'>View All</Button>
-      <Button size='md'>Last Updated</Button>
+      <Button size='sm'>View All</Button>
+      <Button size='sm'>Last Updated</Button>
     </div>
 	);
 }

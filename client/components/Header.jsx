@@ -10,7 +10,7 @@ import { Box, Heading, Flex } from '@chakra-ui/react';
         as='h1'
         size='xl'
         color='white'
-        bg='teal'
+        bg='olive'
         padding='0.25em'
         mb='0.5em'
       >

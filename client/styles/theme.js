@@ -9,14 +9,53 @@ const colors = {
 };
 
 const fonts = {
-  body: 'system-ui, sans-serif',
-  heading: 'Georgia, serif', 
+  body: 'helvetica, sans-serif',
+  heading: 'Century Gothic, sans-serif',
   mono: 'Menlo, monospace',
+};
+
+const Button = {
+  // The styles all button have in common
+  baseStyle: {
+    fontWeight: 'bold',
+  },
+  // Two sizes: sm and md
+  sizes: {
+    sm: {
+      fontSize: '14px',
+      padding: '16px',
+      margin: '6px 12px 6px 0',
+    },
+    md: {
+      fontSize: '16px',
+      padding: '20px 24px',
+      margin: '10px 20px 10px 0',
+    },
+  },
+  // Two variants: outline and solid
+  variants: {
+    outline: {
+      border: '2px solid',
+      borderColor: 'terracotta',
+    },
+    solid: {
+      bg: 'terracotta',
+      color: 'white',
+    },
+  },
+  // The default size and variant values
+  defaultProps: {
+    size: 'md',
+    variant: 'solid',
+  },
 };
 
 const customTheme = extendTheme({
   colors,
   fonts,
+  components: {
+    Button,
+  },
 });
 
 export default customTheme;
