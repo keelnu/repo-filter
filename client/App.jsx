@@ -10,12 +10,6 @@ const App = () => {
   // state management for search bar value
   const [searchValue, setSearchValue] = useState('');
 
-  // // event listener for search bar submit
-  // const handleSearch = (e) => {
-  //   setSearchValue(e.target.value);
-  //   console.log('The search button was clicked.');
-  // };
-
 	return (
     <ApolloProvider client={client}>
       <Header />
