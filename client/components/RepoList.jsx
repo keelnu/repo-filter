@@ -1,24 +1,7 @@
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, Stack } from '@chakra-ui/react';
 import React from 'react';
-import { gql, Query } from '@apollo/client';
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  Divider,
-  Container,
-  Box,
-  List,
-  ListItem,
-} from '@chakra-ui/react';
 
-
-// hardcode list first to get UI looking good
-// then fetch(post) from graphql endpoint and loop over it to populate list items (each item represents a repository and is an object)
-
-const repositoryList = [
+const repo = [
   {
     name: 'Repository A',
     description: 'Repository description goes here.',
@@ -35,44 +18,40 @@ const repositoryList = [
   },
 ];
 
-  const RepoList = () => {
-    return (
-        <ul>
-          {repositoryList.map((repo) => (
-            <li key={repo.id}>
-              <div>{repo.name}</div>
-              <div>{repo.description}</div>
-              <div>{repo.createdAt}</div>
-              <div>{repo.lastCommit}</div>
-              <div>{repo.user}</div>
-            </li>
-          ))}
-        </ul>
-      // <Container maxW='auto'>
-      //   {/* <Box>
-      //     <Table variant='unstyled' >
-      //       <Thead>
-      //         <Tr>
-      //           <Th>Repository Name</Th>
-      //         </Tr>
-      //       </Thead>
-      //       <Tbody>
-      //         <Tr>
-      //           <Td>Description goes here.</Td>
-      //         </Tr>
-      //         <Tr>
-      //           <Td>Created On 01-03-2021</Td>
-      //         </Tr>
-      //         <Tr>
-      //           <Td>Last Commit 02-03-2021</Td>
-      //         </Tr>
-      //       </Tbody>
-      //     </Table>
-      //   </Box> */}
+const RepoList = () => {
+  const {node: {name, descriptionHTML}} = repo;
 
-      //   <Divider orientation='horizontal' padding={2} />
-      // </Container>
-    );
-  }
+  return (
+    <Accordion
+      defaultIndex={[0]}
+      allowToggle
+    >
+      <AccordionItem>
+        <AccordionButton>
+          <Box flex='1' textAlign='left'>
+            {name}
+          </Box>
+          <AccordionIcon />
+        </AccordionButton>
+        <AccordionPanel pb={4}>
+          {descriptionHTML}
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
+    // <Stack direction={["column", "row"]} spacing="24px">
+    //   <ul>
+    //     {repo.map((repo) => (
+    //       <li key={repo.id}>
+    //         <div>{repo.name}</div>
+    //         <div>{repo.description}</div>
+    //         <div>{repo.createdAt}</div>
+    //         <div>{repo.lastCommit}</div>
+    //         <div>{repo.user}</div>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </Stack>
+  )
+};
 
 export default RepoList;

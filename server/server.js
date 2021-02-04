@@ -10,25 +10,20 @@ app.get('/', (req, res) => {
   return res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-// graphql endpoint
-// const githubUrl = 'https://api.github.com/graphql';
-
 //catch all errors
 app.use('*', (req, res) => {
   return res.status(404).send('invalid endpoint');
 });
 
 // //global error handler
-app.use(function (err, req, res, next) {
-  const defaultError = {
-    log: 'Express error handler caught unknown middleware error',
-    status: 500, //always go 500 with server side errors
-    message: {err: 'An error occurred'},
-  };
-  const errorObj = Object.assign(defaultError, err);
-  console.log(errorObj.log);
-  res.status(errorObj.status).json(errorObj.message);
-});
+const errorHandler = (err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
+  const { status } = err;
+  res.status(status).json(err);
+};
+app.use(errorHandler);
 
 app.listen(3000, () => {
   console.log('App listening on port 3000!');

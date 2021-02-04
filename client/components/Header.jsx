@@ -10,11 +10,11 @@ import { Box, Heading, Flex } from '@chakra-ui/react';
         as='h1'
         size='xl'
         color='white'
-        bg='olive'
-        padding='0.5em'
+        bg='#000000'
+        padding='0.75em 1.75em'
         mb='0.5em'
       >
-        Repo Filter
+        GitHub Repo Filter
       </Heading>
     </Box>
 	);

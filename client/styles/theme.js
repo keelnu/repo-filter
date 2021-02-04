@@ -6,10 +6,13 @@ const colors = {
   terracotta: '#bc6c25',
   clay: '#dda15e',
   cornsilk: '#fefae0',
+  cardRed: '#eb001c',
+  cardOrange: '#f79e1b',
+  cardOrange2: '#ff6002',
 };
 
 const fonts = {
-  body: 'helvetica, sans-serif',
+  body: 'Arial, sans-serif',
   heading: 'Century Gothic, sans-serif',
   mono: 'Menlo, monospace',
 };
@@ -17,16 +20,16 @@ const fonts = {
 const Button = {
   // The styles all button have in common
   baseStyle: {
-    fontWeight: 'bold',
+    fontWeight: 'regular',
   },
   // Two sizes: sm and md
   sizes: {
     sm: {
       fontSize: '14px',
-      padding: '16px',
+      padding: '14px',
     },
     md: {
-      fontSize: '16px',
+      fontSize: '18px',
       padding: '20px 24px',
     },
   },
@@ -34,10 +37,10 @@ const Button = {
   variants: {
     outline: {
       border: '2px solid',
-      borderColor: 'terracotta',
+      borderColor: 'cardOrange',
     },
     solid: {
-      bg: 'terracotta',
+      bg: 'cardOrange',
       color: 'white',
     },
   },
