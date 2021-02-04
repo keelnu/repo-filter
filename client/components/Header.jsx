@@ -11,7 +11,7 @@ import { Box, Heading, Flex } from '@chakra-ui/react';
         size='xl'
         color='white'
         bg='olive'
-        padding='0.25em'
+        padding='0.5em'
         mb='0.5em'
       >
         Repo Filter

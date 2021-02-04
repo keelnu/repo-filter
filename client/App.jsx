@@ -1,8 +1,8 @@
 import React from 'react';
 import SearchBar from './components/SearchBar.jsx';
-import FilterButtons from './components/FilterButtons.jsx';
 import Header from './components/Header.jsx';
-import { Box } from '@chakra-ui/react';
+import RepoList from './components/RepoList.jsx';
+import { Box, VStack } from '@chakra-ui/react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -51,11 +51,11 @@ const App = () => {
 	return (
     <ApolloProvider client={client}>
       <Header />
-      <Box
-        padding='14px 20px'
-      >
-        <SearchBar />
-        <FilterButtons />
+      <Box padding='1em 1.5em'>
+        <VStack align='left' spacing={6}>
+          <SearchBar />
+          <RepoList />
+        </VStack>
       </Box>
     </ApolloProvider>
 	);

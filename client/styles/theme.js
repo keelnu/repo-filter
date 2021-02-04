@@ -24,12 +24,10 @@ const Button = {
     sm: {
       fontSize: '14px',
       padding: '16px',
-      margin: '6px 12px 6px 0',
     },
     md: {
       fontSize: '16px',
       padding: '20px 24px',
-      margin: '10px 20px 10px 0',
     },
   },
   // Two variants: outline and solid
