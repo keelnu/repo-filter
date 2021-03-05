@@ -16,7 +16,7 @@ A work in progress-- a web app that aims to consume the GitHub repositories API 
 1. Fork and clone the repo.
 2. Run `npm install` to download dependencies.
 3. Use `npm run dev` to spin up localhost – visit http://localhost:8080/ to view in browser.<br/>
-*Note: Currently app will only render if personal access token is explicitly included in line 6 of apolloclient.js (see open issue).*
+*Note: Currently app will only render if personal access token is explicitly included as value of 'authorization' property within the new instance of ApolloClient (lines 9-17 in index.jsx – see open issue).*
 
 ## Contributors
 Kristiina Eelnurme
