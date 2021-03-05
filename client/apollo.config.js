@@ -7,7 +7,7 @@ module.exports = {
         authorization: `bearer ${process.env.REACT_APP_BEARER}`
       },
       // optional disable SSL validation check
-      skipSSLValidation: true,
+      skipSSLValidation: true, 
     }
   }
 };
