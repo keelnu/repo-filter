@@ -9,13 +9,15 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
 
 	return (
-    <Header />
-    <Box padding='1em 4em'>
-      <VStack align='left' spacing={6}>
-        <SearchBar value={searchValue} onChange={setSearchValue} />
-        <SearchResults searchValue={searchValue} />
-      </VStack>
-    </Box>
+    <>
+      <Header />
+      <Box padding='1em 4em'>
+        <VStack align='left' spacing={6}>
+          <SearchBar value={searchValue} onChange={setSearchValue} />
+          <SearchResults searchValue={searchValue} />
+        </VStack>
+      </Box>
+    </>
 	);
 }
 
