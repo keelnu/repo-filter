@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 
 // Header component to contain Heading 'Repo Filter' and color mode toggle
 
