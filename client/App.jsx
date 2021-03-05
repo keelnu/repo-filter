@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import SearchBar from './components/SearchBar.jsx';
 import Header from './components/Header.jsx';
 import SearchResults from './components/SearchResults.jsx';
-import client from './apollo.config.js';
 import { Box, VStack } from '@chakra-ui/react';
 
 const App = () => {
