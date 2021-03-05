@@ -4,7 +4,8 @@ import {
   Button,
   ButtonGroup,
   VStack,
-  HStack,
+  HStack, 
+  Text,
  } from '@chakra-ui/react';
 
 
@@ -14,6 +15,9 @@ import {
     <div>
       <VStack align='left' spacing={4}>
         <HStack>
+          <Text>
+            Search repositories by user
+          </Text>
           <Input 
             placeholder='Search repositories'
             variant='outline'
