@@ -1,3 +1,5 @@
+// const Dotenv = require('dotenv-webpack');
+
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: './client/index.jsx',
@@ -35,4 +37,9 @@ module.exports = {
       },
     ],
   },
+  // plugins: [
+  //   new Dotenv({
+  //     safe: true,
+  //   })
+  // ]
 };

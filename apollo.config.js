@@ -4,7 +4,7 @@ module.exports = {
       name: 'github', 
       url: 'https://api.github.com/graphql',
       headers: {
-        authorization: `bearer ${process.env.REACT_APP_BEARER}`
+        authorization: `Bearer ${process.env.GITHUB_KEY}`
       },
       // optional disable SSL validation check
       skipSSLValidation: true, 
