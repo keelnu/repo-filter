@@ -9,7 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
   headers: {
-    authorization: `bearer ${process.env.REACT_APP_GITHUB_KEY}`,
+    authorization: `Bearer ${process.env.GITHUB_KEY}`,
     'Accept-Language': 'en-US',
   },
   // connectToDevtools: true,
